@@ -22,9 +22,6 @@ public class FromFileLetterPrinter {
     @Option(name = "--input", handler = FileOptionHandler.class, usage = "Input yml-file (./mail.yml default)")
     public File inputFile = new File("./mail.yml");
 
-    @Option(name = "--format", handler = LetterFormatOptionHandler.class, usage = "Format A4 or A5 (default)")
-    public LetterFormat format = LetterFormat.A5;
-
     public static void main(String[] args) throws IOException, PrintException {
 
         FromFileLetterPrinter printer = new FromFileLetterPrinter();
@@ -69,7 +66,7 @@ public class FromFileLetterPrinter {
         for(Address to: task.getToList()) {
             System.out.println("Print to " + to);
             LetterPrinter letterPrinter = new LetterPrinter();
-            letterPrinter.run(task.getFrom(), to, format);
+            letterPrinter.run(task.getFrom(), to);
         }
 
     }
