@@ -1,0 +1,12 @@
+from:
+  who: Кантор Илья Александрович
+  addressLines: 
+    - Россия, Москва, 123423
+    - ул.Народного Ополчения д.11 кв.620
+  index: 123423
+
+toList:
+  - who: "who"
+    addressLines: 
+      - "addressLine 1"
+    index: 123456

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="printLetter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/printLetter_jar</output-path>
+    <root id="archive" name="printLetter.jar">
+      <element id="module-output" name="printLetter" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/pdfbox-2.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/fontbox-2.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/args4j-2.33.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/snakeyaml-1.16.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

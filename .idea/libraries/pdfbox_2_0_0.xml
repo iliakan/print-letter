@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="pdfbox-2.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/debugger/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/examples/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/examples/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/fontbox/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/fontbox/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/pdfbox/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/pdfbox/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/preflight/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/preflight/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/tools/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/tools/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/xmpbox/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/libs/pdfbox-2.0.0-src.zip!/pdfbox-2.0.0/xmpbox/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
