@@ -21,7 +21,7 @@ public class PrintableTask implements Printable {
     }
 
     protected void drawString(String str, int x, int y) {
-        System.out.println(str + ' ' + x + ',' + y);
+//        System.out.println(str + ' ' + x + ',' + y);
         pg.drawString(str, x, y);
     }
 
@@ -68,9 +68,11 @@ public class PrintableTask implements Printable {
         }
 
         this.pg = pg;
-        Font font = new Font("TimesRoman", Font.PLAIN, 14);
-        pg.setFont(font);
 
+        Font times16 = new Font("Times New Roman", Font.PLAIN, 16);
+        Font times14 = new Font("Times New Roman", Font.PLAIN, 14);
+
+        pg.setFont(times14);
 
         // конверт открытой стороной вниз, полоской влево
         int y = 50;
@@ -82,8 +84,8 @@ public class PrintableTask implements Printable {
             drawString(line, x, y);
         }
 
+        pg.setFont(times16);
         y += pg.getFontMetrics().getHeight();
-        pg.setFont(font.deriveFont(16));
         drawString(from.getIndex(), x + 100, y);
 
 
@@ -94,12 +96,12 @@ public class PrintableTask implements Printable {
             lines.addAll(addressLineSplit);
         }
 
-        System.out.println(lines);
+//        System.out.println(lines);
 
-        pg.setFont(font.deriveFont(14));
+        pg.setFont(times14);
 
         y = 350;
-        x = 360;
+        x = 300;
 
         drawString("Кому: " + to.getWho(), x, y);
 
@@ -108,8 +110,8 @@ public class PrintableTask implements Printable {
             drawString(line, x, y);
         }
 
+        pg.setFont(times16);
         y += pg.getFontMetrics().getHeight();
-        pg.setFont(font.deriveFont(14));
         drawString(to.getIndex(), x + 50, y);
 
         /*

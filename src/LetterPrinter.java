@@ -24,7 +24,6 @@ import java.util.List;
 public class LetterPrinter {
 
 
-
     public void run(Address from, Address to) throws PrintException, IOException {
         String defaultPrinter = PrintServiceLookup.lookupDefaultPrintService().getName();
         System.out.println("Default printer: " + defaultPrinter);
