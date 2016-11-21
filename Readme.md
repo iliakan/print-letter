@@ -1,4 +1,4 @@
-I get quite many letters and need to print addresses on them.
+I send quite a few letters and need to print addresses on envelopes to send them.
 
 That's a tiny utility to do that.
 
