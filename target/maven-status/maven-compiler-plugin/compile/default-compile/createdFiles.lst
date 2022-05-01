@@ -1,11 +1,4 @@
 Task.class
-TaskDeserializer.class
-LetterPrinter.class
-Test$PrintableDemo.class
-Test.class
-PrintableTask.class
-FromJSONLetterPrinter.class
 Address.class
+TaskDeserializer.class
 FromFileLetterPrinter.class
-PrintJobWatcher$1.class
-PrintJobWatcher.class

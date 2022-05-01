@@ -10,58 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cfe8f24-13b6-4094-8daa-eb46110869e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__args4j_args4j_2_33.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_fontbox_2_0_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_pdfbox_2_0_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PrintableTaskPdf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TaskDeserializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/args4j_2_33_javadoc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_logging_1_2_javadoc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/snakeyaml_1_16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/args4j-2.33-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/args4j-2.33-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/args4j-2.33.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/commons-logging-1.2-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/snakeyaml-1.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/printLetter_jar/printLetter.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/FromFileLetterPrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/LetterPrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/PrintJobWatcher$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/PrintJobWatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/PrintableTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/Test$PrintableDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/resources/arial.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/printLetter/resources/mail.yml-example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printLetter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/printLetter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FromFileLetterPrinter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LetterPrinter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrintJobWatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrintableTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/arial.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/mail.yml-example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FromFileLetterPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FromFileLetterPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PrintJobWatcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PrintableTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PrintableTaskPdf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FromFileLetterPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FromFileLetterPrinter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PrintJobWatcher$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PrintJobWatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PrintableTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Test$PrintableDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/printLetter-no-deps.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/printLetter-no-deps.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/printLetter.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/printLetter.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mail.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/mail.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/output_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/print.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/test/print.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +37,6 @@
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="printLetter" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -256,7 +220,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FromFileLetterPrinter">
+  <component name="RunManager" selected="Maven.package">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -319,7 +283,7 @@
     <configuration name="FromFileLetterPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FromFileLetterPrinter" />
       <module name="printLetter" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

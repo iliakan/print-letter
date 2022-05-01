@@ -1,11 +1,10 @@
 import com.itextpdf.awt.PdfGraphics2D;
 import com.itextpdf.text.*;
+import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Rectangle;
-import com.itextpdf.text.pdf.CMYKColor;
-import com.itextpdf.text.pdf.PdfContentByte;
-import com.itextpdf.text.pdf.PdfTemplate;
-import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.*;
+import org.apache.pdfbox.io.IOUtils;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
@@ -19,10 +18,9 @@ import javax.print.PrintException;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.net.URL;
+import java.nio.file.Files;
 
-/**
- * Use VipRiser printer to test it
- */
 public class FromFileLetterPrinter {
 
 
@@ -47,22 +45,20 @@ public class FromFileLetterPrinter {
         }
     }
 
-    public void run() throws PrintException, IOException, DocumentException {
+    public void run() throws IOException, DocumentException {
 
         System.out.println("Reading " + inputFile.getPath());
-        InputStream input = new FileInputStream(inputFile);
+        InputStream input = Files.newInputStream(inputFile.toPath());
 
-        OutputStream output = new FileOutputStream(outputFile);
+        OutputStream output = Files.newOutputStream(outputFile.toPath());
 
         Rectangle pageSize = PageSize.A5.rotate();
-        // PageSize.A5.rotate() ?
-        Document document = new Document(pageSize, 0, 0, 0, 0);
+        Document document = new Document(pageSize, 10, 10, 10, 10);
         PdfWriter writer = PdfWriter.getInstance(document, output);
-        PdfContentByte canvas = writer.getDirectContent();
 
         document.open();
 
-        // PdfContentByte canvas = writer.getDirectContent();
+        PdfContentByte canvas = writer.getDirectContent();
 
         Constructor constructor = new Constructor(Task.class);
         TypeDescription taskDescription = new TypeDescription(Task.class);
@@ -70,7 +66,7 @@ public class FromFileLetterPrinter {
         constructor.addTypeDescription(taskDescription);
         Yaml yaml = new Yaml(constructor);
 
-        /**
+        /*
          * Example:
          *
          * from:
@@ -86,38 +82,63 @@ public class FromFileLetterPrinter {
 
         Task task = (Task) yaml.load(input);
 
+        /*
+        URL classPath = FromFileLetterPrinter.class.getClassLoader().getResource("arial.ttf");
+        System.out.println(classPath);
+        */
+
+        // need file to allow cyrillic
+        byte[] bytes = IOUtils.toByteArray(FromFileLetterPrinter.class.getClassLoader().getResourceAsStream(("arial.ttf")));
+        BaseFont baseFontRussian = BaseFont.createFont("arial.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED, true, bytes, null);
+
+        Font font14 = new Font(baseFontRussian, 14);
+        Font font16 = new Font(baseFontRussian, 16);
+
         for(Address to: task.getToList()) {
             System.out.println("Print to " + to);
 
-            // TYPE_INT_RGB - цветная
-            // TYPE_BYTE_GRAY
-            BufferedImage bImg = new BufferedImage((int)pageSize.getWidth(), (int)pageSize.getHeight(), BufferedImage.TYPE_BYTE_GRAY);
+            document.newPage();
 
-            Graphics2D pg = bImg.createGraphics();
-            pg.setColor(Color.WHITE);
-            pg.fillRect(0, 0, bImg.getWidth(), bImg.getHeight());
+            document.add(new Paragraph("От: " + task.getFrom().getWhoLines().get(0), font14));
+            for (String line : task.getFrom().getAddressLines()) {
+                document.add(new Paragraph(line, font14));
+            }
 
-            pg.setColor(Color.BLACK);
+            document.add(new Paragraph(task.getFrom().getIndex(), font16));
 
-//            Graphics2D pg = new PdfGraphics2D(template, pageSize.getWidth(), pageSize.getHeight());
+            // 295.000000 220.000000 595.000000 420.000000
+            // (0,0) is in the left-bottom corner
+            // https://kb.itextpdf.com/home/it5kb/faq/how-should-i-interpret-the-coordinates-of-a-rectangle-in-pdf
+            Rectangle rect = new Rectangle(pageSize.getWidth() - 320, 10, pageSize.getWidth() - 20, 160);
+//            rect.setBorder(Rectangle.BOX);
+//            rect.setBorderWidth(1);
+//            rect.setBackgroundColor(BaseColor.GRAY);
+//            rect.setBorderColor(BaseColor.GREEN);
+//            canvas.rectangle(rect);
 
-            PrintableTask printableTask = new PrintableTask(task.getFrom(), to, pg);
+            ColumnText ct = new ColumnText(canvas);
+            ct.setSimpleColumn(rect);
 
-            printableTask.print();
+            for (int i = 0; i < to.getAddressLines().size(); i++) {
+                String line = to.getAddressLines().get(i);
+                if (i == 0) line =  "Куда: " + line;
+                ct.addElement(new Paragraph(line, font14));
+            }
 
-            ImageIO.write(bImg, "png", new File("./output_image.png"));
-            pg.dispose();
+            for (int i = 0; i < to.getWhoLines().size(); i++) {
+                String line = to.getWhoLines().get(i);
+                if (i == 0) line =  "Кому: " + line;
+                ct.addElement(new Paragraph(line, font14));
+            }
 
-            Image image = Image.getInstance(bImg, null);
-            image.setAbsolutePosition(0,0);
-            image.setBackgroundColor(CMYKColor.WHITE);
 
-            writer.getDirectContentUnder().addImage(image);
+            ct.addElement(new Paragraph(to.getIndex(), font16));
 
-            document.close();
 
+            ct.go();
 
         }
 
+        document.close();
     }
 }
